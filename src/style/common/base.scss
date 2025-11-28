@@ -1,0 +1,63 @@
+@use './variables' as *;
+
+:root {
+  color-scheme: light;
+  color: #1E212C;
+  background-color: $color-bg-light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  font-weight: 500;
+  color: $color-text;
+  
+  &:hover {
+    color: $color-text-light;
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: $border-radius;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: $color-bg-light;
+  cursor: pointer;
+  transition: border-color $transition-base;
+  
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #1E212C;
+    background-color: $color-bg-light;
+  }
+  
+  a:hover {
+    color: $color-text-light;
+  }
+  
+  button {
+    background-color: $color-bg-light;
+  }
+}
+

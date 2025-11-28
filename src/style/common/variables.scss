@@ -1,0 +1,25 @@
+$font-family-base: 'Lato', sans-serif;
+
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+$color-text: #1E212C;
+$color-text-light: #1E212C;
+$color-text-muted: #888;
+
+$color-bg-light: #ffffff;
+
+$border-radius: 8px;
+
+$transition-base: 0.25s;
+$transition-fast: 0.15s;
+$transition-slow: 0.3s;
+
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  'xxl': 1536px
+);
+

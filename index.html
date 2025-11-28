@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>test-table</title>
+  </head>
+  <body>
+    <div class="courses">
+      <div class="courses__decoration courses__decoration--dots"></div>
+      <div class="courses__decoration courses__decoration--arrows"></div>
+      <div class="courses__decoration courses__decoration--shapes"></div>
+
+      <div class="courses__container">
+        <header class="courses__header">
+          <div class="courses__header-inner">
+            <p class="courses__subtitle">ENJOY YOUR STUDYING!</p>
+            <h1 class="courses__title">Our online courses</h1>
+          </div>
+          
+          <div class="courses__header-controls">
+            <nav class="courses__filters" id="category-filters">
+              <!-- Фильтры будут добавлены через JS -->
+            </nav>
+            
+            <div class="courses__search-wrapper">
+              <input type="text" class="courses__search-input" id="search-input" placeholder="Search course..." >
+              <svg class="courses__search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </header>
+        
+        <main >
+          <div class="courses__grid" id="courses-grid">
+          <!-- Карточки будут добавлены через JS -->
+        </div>
+        </main>
+        
+        <footer class="courses__footer">
+        <div class="courses__load-more-wrapper" id="load-more-wrapper">
+          <button class="courses__more-btn" id="load-more-btn">
+            <img src="/svg/Convert.svg" alt="" class="courses__load-more-icon" >
+              Load more
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
