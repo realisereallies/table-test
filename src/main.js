@@ -142,6 +142,7 @@ const coursesData = [
 let displayedCount = 9;
 let currentCategory = "All";
 let searchQuery = "";
+let searchTimeout = null;
 
 function getCategoryClass(category) {
   const categoryMap = {
@@ -275,16 +276,6 @@ function attachEventListeners() {
     });
   });
 
-  const searchInput = document.querySelector("#search-input");
-  if (searchInput) {
-    searchInput.value = searchQuery;
-    searchInput.addEventListener("input", (e) => {
-      searchQuery = e.target.value;
-      displayedCount = 9;
-      renderCourses();
-    });
-  }
-
   const loadMoreBtn = document.querySelector("#load-more-btn");
   if (loadMoreBtn) {
     loadMoreBtn.replaceWith(loadMoreBtn.cloneNode(true));
@@ -295,5 +286,24 @@ function attachEventListeners() {
   }
 }
 
+function initSearch() {
+  const searchInput = document.querySelector("#search-input");
+  if (searchInput) {
+    searchInput.value = searchQuery;
+    searchInput.addEventListener("input", (e) => {
+      if (searchTimeout) {
+        clearTimeout(searchTimeout);
+      }
+      
+      searchTimeout = setTimeout(() => {
+        searchQuery = e.target.value;
+        displayedCount = 9;
+        renderCourses();
+      }, 300);
+    });
+  }
+}
+
 renderFilters();
 renderCourses();
+initSearch();

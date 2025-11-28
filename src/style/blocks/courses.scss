@@ -155,6 +155,7 @@
   cursor: pointer;
   transition: color 0.3s;
   background-color: transparent;
+  color: #1E212C;
   gap: clamp(0.75rem, 1.5vw, 1rem);
 
   &:hover, &:focus {

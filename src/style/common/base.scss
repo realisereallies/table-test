@@ -38,8 +38,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   background-color: $color-bg-light;
+  color: $color-text;
   cursor: pointer;
   transition: border-color $transition-base;
+  -webkit-tap-highlight-color: transparent;
   
   &:hover, &:focus {
     opacity: 0.6;
